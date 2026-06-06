@@ -1,0 +1,201 @@
+.baby-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.baby-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.date-input {
+  color-scheme: dark;
+}
+
+.baby-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.baby-tab {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.baby-tab.active {
+  border-color: #ff6584;
+  background: rgba(255, 101, 132, 0.08);
+}
+
+.baby-tab button:first-child {
+  background: none;
+  border: none;
+  padding: 6px 14px;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.baby-tab.active button:first-child {
+  color: #ff6584;
+}
+
+.remove-baby {
+  background: none;
+  border: none;
+  border-left: 1px solid var(--border);
+  padding: 6px 10px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.remove-baby:hover { color: #ff6584; }
+
+.baby-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.baby-empty span { font-size: 3rem; }
+.baby-empty p { font-size: 0.95rem; }
+
+/* Age card */
+.baby-age-card {
+  background: linear-gradient(135deg, rgba(255, 101, 132, 0.12), rgba(108, 99, 255, 0.12));
+  border: 1px solid rgba(255, 101, 132, 0.25);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.baby-age-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.baby-name-display {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.baby-age-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff6584, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.baby-born {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.current-stage-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.stage-emoji { font-size: 2rem; }
+.stage-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ff6584;
+  text-align: center;
+}
+
+/* Milestone sections */
+.milestone-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.milestone-section {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.milestone-section.current { border-color: rgba(108, 99, 255, 0.35); }
+.milestone-section.next { border-color: rgba(67, 233, 123, 0.25); }
+.milestone-section.past { border-color: var(--border); }
+
+.milestone-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.milestone-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.milestone-dot {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+}
+
+.current-item .milestone-dot { color: var(--primary); }
+.next-item .milestone-dot { color: var(--accent); }
+
+.past-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.past-badge {
+  background: rgba(67, 233, 123, 0.08);
+  border: 1px solid rgba(67, 233, 123, 0.2);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+@media (max-width: 500px) {
+  .baby-form { flex-direction: column; }
+  .todo-add-btn { width: 100%; justify-content: center; }
+}

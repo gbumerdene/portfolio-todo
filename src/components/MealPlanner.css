@@ -1,0 +1,196 @@
+.meal-planner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Day tabs */
+.day-tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.day-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.day-tab:hover { color: var(--primary); background: var(--bg-card2); }
+.day-tab.active {
+  background: var(--bg-card);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.day-tab.today .day-short { color: var(--primary); }
+
+.today-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+/* Day header */
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.today-badge {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.reset-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.reset-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Meal cards */
+.meal-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.meal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s;
+  border-top: 3px solid transparent;
+}
+.meal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.meal-breakfast { border-top-color: #f4a261; }
+.meal-lunch { border-top-color: #e8699a; }
+.meal-dinner { border-top-color: #6c63ff; }
+
+.meal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meal-icon { font-size: 1.2rem; }
+
+.meal-label {
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.edit-meal-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.meal-card:hover .edit-meal-btn { opacity: 1; }
+
+.meal-text {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Edit mode */
+.meal-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meal-input {
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-size: 0.88rem;
+  width: 100%;
+  box-shadow: 0 0 0 3px rgba(201, 77, 122, 0.1);
+}
+.meal-input:focus { outline: none; }
+
+.meal-edit-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.save-btn {
+  flex: 1;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.meal-hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .meal-cards { grid-template-columns: 1fr; }
+  .day-tab { padding: 8px 4px; font-size: 0.75rem; }
+}
