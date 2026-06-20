@@ -24,11 +24,13 @@
 .app-tab:hover { color: var(--text); }
 .app-tab.active {
   background: var(--bg-card2);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.app-tab:first-child.active { color: var(--primary); }
-.app-tab:last-child.active { color: #ff6584; }
+.app-tab:nth-child(1).active { color: var(--primary); }
+.app-tab:nth-child(2).active { color: #e8895a; }
+.app-tab:nth-child(3).active { color: #52b788; }
+.app-tab:nth-child(4).active { color: #ff6584; }
 
 .todo-label {
   text-align: center;

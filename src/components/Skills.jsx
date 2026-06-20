@@ -5,33 +5,39 @@ const skillGroups = [
     category: 'Frontend',
     icon: '🎨',
     skills: [
-      { name: 'React', level: 75 },
-      { name: 'jQuery', level: 65 },
-      { name: 'EJS', level: 65 },
-      { name: 'Responsive Design', level: 65 },
+      { name: 'React', label: 'Building projects with' },
+      { name: 'jQuery', label: 'Working knowledge' },
+      { name: 'EJS', label: 'Working knowledge' },
+      { name: 'Responsive Design', label: 'Working knowledge' },
     ],
   },
   {
     category: 'Backend',
     icon: '⚙️',
     skills: [
-      { name: 'Node.js', level: 65 },
-      { name: 'Express.js', level: 60 },
-      { name: 'REST APIs', level: 60 },
-      
+      { name: 'Node.js', label: 'Building projects with' },
+      { name: 'Express.js', label: 'Building projects with' },
+      { name: 'REST APIs', label: 'Building projects with' },
     ],
   },
   {
     category: 'Languages & Databases',
     icon: '🗄️',
     skills: [
-      { name: 'JavaScript', level: 75 },
-      { name: 'HTML/CSS', level: 65 },
-      { name: 'Java', level: 35 },
-      { name: 'PostgreSQL', level: 75 },
+      { name: 'JavaScript', label: 'Building projects with' },
+      { name: 'HTML/CSS', label: 'Working knowledge' },
+      { name: 'Java', label: 'Learning' },
+      { name: 'PostgreSQL', label: 'Building projects with' },
     ],
   },
 ]
+
+// Maps label text to a CSS modifier class for color-coding
+const LABEL_CLASS = {
+  'Building projects with': 'badge--building',
+  'Working knowledge': 'badge--working',
+  'Learning': 'badge--learning',
+}
 
 export default function Skills() {
   return (
@@ -48,18 +54,18 @@ export default function Skills() {
             <div className="skill-list">
               {group.skills.map(s => (
                 <div key={s.name} className="skill-item">
-                  <div className="skill-meta">
-                    <span>{s.name}</span>
-                    <span className="skill-pct">{s.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-fill" style={{ width: `${s.level}%` }} />
-                  </div>
+                  <span className="skill-name">{s.name}</span>
+                  <span className={`skill-badge ${LABEL_CLASS[s.label]}`}>{s.label}</span>
                 </div>
               ))}
             </div>
           </div>
         ))}
+      </div>
+      <div className="skill-legend">
+        <span className="skill-badge badge--building">Building projects with</span>
+        <span className="skill-badge badge--working">Working knowledge</span>
+        <span className="skill-badge badge--learning">Learning</span>
       </div>
     </div>
   )

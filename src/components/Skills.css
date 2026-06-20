@@ -31,32 +31,53 @@
   color: #fff;
 }
 
-.skill-list { display: flex; flex-direction: column; gap: 16px; }
+.skill-list { display: flex; flex-direction: column; gap: 12px; }
 
-.skill-item {}
-
-.skill-meta {
+.skill-item {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 0.88rem;
+  gap: 8px;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--text);
 }
 
-.skill-pct { color: var(--primary); font-weight: 600; }
-
-.skill-bar {
-  height: 6px;
-  background: var(--border);
-  border-radius: 3px;
-  overflow: hidden;
+.skill-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
-.skill-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 3px;
-  transition: width 1s ease;
+.badge--building {
+  background: rgba(201, 77, 122, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(201, 77, 122, 0.3);
+}
+
+.badge--working {
+  background: rgba(74, 158, 115, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(74, 158, 115, 0.3);
+}
+
+.badge--learning {
+  background: rgba(232, 137, 90, 0.12);
+  color: var(--secondary);
+  border: 1px solid rgba(232, 137, 90, 0.3);
+}
+
+.skill-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 @media (max-width: 900px) {
