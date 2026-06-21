@@ -1,6 +1,15 @@
+#home {
+  min-height: auto !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
 .hero-wrapper {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-bg {
@@ -17,8 +26,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  min-height: 100vh;
-  padding-top: 100px;
+  width: 100%;
+  padding-top: 80px;
   padding-bottom: 60px;
 }
 
