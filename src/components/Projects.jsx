@@ -20,11 +20,11 @@ const projects = [
     demo: 'tasks',
   },
   {
-    emoji: '🔗',
-    title: 'Family Data REST API',
+    emoji: '🔐',
+    title: 'Secrets App',
     description:
-      'A backend API powering family-focused apps — tracking routines, schedules, and notes. Designed with RESTful principles, full CRUD operations, PostgreSQL integration, and structured JSON responses.',
-    tags: ['Node.js', 'Express', 'PostgreSQL', 'REST API'],
+      'A Node.js app that fetches a random anonymous secret from a public REST API on every page load. Built with Express, Axios for API calls, and EJS for server-side rendering.',
+    tags: ['Node.js', 'Express', 'Axios', 'REST API', 'EJS'],
     color: '#43e97b',
   },
 ]
