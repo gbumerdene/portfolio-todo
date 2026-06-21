@@ -77,6 +77,10 @@ export default function TravelTracker() {
   const totalCountries = 195
 
   return (
+    <div className="container">
+      <div className="todo-label">⭐ Live Demo</div>
+      <h2 className="section-title">Family Travel Tracker</h2>
+      <p className="section-sub">Click any country to mark it as visited — each family member gets their own color 🗺️</p>
     <div className="travel-tracker">
 
       {/* Member tabs */}
@@ -178,6 +182,7 @@ export default function TravelTracker() {
       <p className="travel-hint" style={{ marginTop: 8 }}>
         💡 Click any visited country again to unmark it
       </p>
+    </div>
     </div>
   )
 }

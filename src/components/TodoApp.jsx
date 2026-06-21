@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import BabyTracker from './BabyTracker'
 import MealPlanner from './MealPlanner'
 import GroceryList from './GroceryList'
-import TravelTracker from './TravelTracker'
 import './TodoApp.css'
 
 const PRIORITIES = { high: '🔴', medium: '🟡', low: '🟢' }
@@ -94,9 +93,6 @@ export default function TodoApp() {
           </button>
           <button className={`app-tab ${activeTab === 'grocery' ? 'active' : ''}`} onClick={() => setActiveTab('grocery')}>
             🛒 Grocery
-          </button>
-          <button className={`app-tab ${activeTab === 'travel' ? 'active' : ''}`} onClick={() => setActiveTab('travel')}>
-            🌍 Travel
           </button>
           <button className={`app-tab ${activeTab === 'baby' ? 'active' : ''}`} onClick={() => setActiveTab('baby')}>
             👶 Baby
@@ -212,8 +208,7 @@ export default function TodoApp() {
         {/* GROCERY LIST TAB */}
         {activeTab === 'grocery' && <GroceryList />}
 
-        {/* TRAVEL TRACKER TAB */}
-        {activeTab === 'travel' && <TravelTracker />}
+
       </div>
     </div>
   )
