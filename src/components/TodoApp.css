@@ -277,7 +277,10 @@
   cursor: pointer;
   text-decoration: underline;
 }
-.clear-btn:hover { color: #fff; }
+.clear-btn:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
 
 @media (max-width: 600px) {
   .todo-shell { padding: 20px 16px; }
