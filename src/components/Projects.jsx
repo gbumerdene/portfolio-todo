@@ -2,11 +2,11 @@ import './Projects.css'
 
 const projects = [
   {
-    emoji: '📝',
-    title: 'Mom\'s Blog Platform',
+    emoji: '🗺️',
+    title: 'Family Travel Tracker',
     description:
-      'A full-stack blog where I document parenting moments, baby milestones, and mom life. Built with Node.js, Express, EJS, and PostgreSQL with full CRUD — create, edit, and delete posts with persistent storage.',
-    tags: ['Node.js', 'Express', 'PostgreSQL', 'EJS', 'MVC'],
+      'An interactive SVG world map where each family member tracks the countries they\'ve visited — each person gets their own color on the map. Built with Node.js, Express, EJS, and PostgreSQL with multi-user support.',
+    tags: ['Node.js', 'Express', 'PostgreSQL', 'EJS', 'SVG'],
     color: '#ff6584',
     status: 'Completed',
   },

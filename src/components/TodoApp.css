@@ -30,7 +30,8 @@
 .app-tab:nth-child(1).active { color: var(--primary); }
 .app-tab:nth-child(2).active { color: #e8895a; }
 .app-tab:nth-child(3).active { color: #52b788; }
-.app-tab:nth-child(4).active { color: #ff6584; }
+.app-tab:nth-child(4).active { color: #6c63ff; }
+.app-tab:nth-child(5).active { color: #ff6584; }
 
 .todo-label {
   text-align: center;
@@ -142,7 +143,7 @@
 .filter-btn.active {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: #c29191;
 }
 
 /* List */
@@ -198,7 +199,7 @@
   transition: all 0.2s;
 }
 .check-btn:hover { border-color: var(--primary); background: rgba(108,99,255,0.1); }
-.done .check-btn { background: var(--accent); border-color: var(--accent); color: #fff; }
+.done .check-btn { background: var(--accent); border-color: var(--accent); color: #dcb5b5; }
 
 .todo-text {
   flex: 1;
@@ -276,10 +277,12 @@
   font-size: 0.85rem;
   cursor: pointer;
   text-decoration: underline;
+  transition: color 0.2s;
 }
 .clear-btn:hover {
-  color: var(--primary);
+  color: #c94d7a !important;
   text-decoration: none;
+  background: none !important;
 }
 
 @media (max-width: 600px) {
